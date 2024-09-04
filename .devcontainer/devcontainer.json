@@ -1,0 +1,12 @@
+{
+    "name": "Encore Playground Environment",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "myapp",  
+    "customizations": {
+        "vscode": {
+            "extensions": []
+        }
+    },
+    "remoteUser": "vscode",
+    "workspaceFolder": "/usr/src/app"
+}
