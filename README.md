@@ -5,3 +5,10 @@ This repository is a sandbox for experimenting with the new Encore framework. It
 Use the following env variables
 
 HOST_MOUNT_PATH=docker/mount/path/for/workdir
+
+
+Commands:
+
+encore run: Run your app locally
+
+encore test: Run tests

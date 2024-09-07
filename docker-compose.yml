@@ -1,10 +1,32 @@
-version: '3'  
+version: '3'
+
 services:
-  myapp:
+  backend:
     build:
-      context: .  
-      dockerfile: Dockerfile  
-    image: encore-pg:latest
-    container_name: encore-pg-container
+      context: .  # Path to dockerfile 
+    image: encore-backend-iamge
+    container_name: encore-backend-container
     volumes:
       - "${HOST_MOUNT_PATH}:/usr/src/app"
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+  prometheus:
+    build:
+      context: ./prometheus-template  # Path to the prometheus dockerfile
+    image: prometheus-image
+    container_name: prometheus-container
+    volumes:
+      - ./prometheus-project/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+
