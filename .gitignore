@@ -1,8 +1,9 @@
 .env
 self.notes.txt
-.encore
-encore.gen.go
-encore.gen.cue
-/.encore
-node_modules
-/encore.gen
+encore-app/.encore
+encore-app/encore.gen.go
+encore-app/encore.gen.cue
+encore-app/.encore
+encore-app/node_modules
+encore-app/encore.gen
+
