@@ -9,6 +9,6 @@ HOST_MOUNT_PATH=docker/mount/path/for/workdir
 
 Commands:
 
+cd encore-app
 encore run: Run your app locally
-
 encore test: Run tests
